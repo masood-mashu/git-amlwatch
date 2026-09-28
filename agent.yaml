@@ -1,0 +1,39 @@
+spec_version: "0.1.0"
+name: git-amlwatch
+version: 1.0.0
+description: "Autonomous Anti-Money Laundering (AML), Transaction Velocity & SAR Filing Risk Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - aml-structuring-analysis
+  - sanctions-screening-protocol
+
+tools:
+  - structuring-smurfing-detector
+  - transaction-velocity-monitor
+  - sanctions-entity-screener
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - finance
+  - aml
+  - compliance
+  - fraud-detection
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-amlwatch-01"
+  passport_category: "Finance"

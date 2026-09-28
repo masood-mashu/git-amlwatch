@@ -1,0 +1,18 @@
+name: sanctions-entity-screener
+version: 1.0.0
+description: "Performs exact and normalized screening against active international sanction watchlists"
+input_schema:
+  type: object
+  properties:
+    entity_name:
+      type: string
+      description: "Full legal name or alias of the transaction counterparty"
+  required:
+    - entity_name
+implementation:
+  type: script
+  path: sanctions_entity_screener.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
