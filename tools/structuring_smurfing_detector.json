@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "structuring_smurfing_detector",
+  "description": "Identifies sequential cash deposits structured just below the $10,000 threshold",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "deposits_json": {
+        "type": "string",
+        "description": "JSON list of deposit amounts"
+      }
+    },
+    "required": [
+      "deposits_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

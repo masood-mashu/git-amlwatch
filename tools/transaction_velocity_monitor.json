@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "transaction_velocity_monitor",
+  "description": "Calculates transaction volume velocity spikes against historical baseline",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "daily_volume": {
+        "type": "string",
+        "description": "Daily transaction volume in USD"
+      }
+    },
+    "required": [
+      "daily_volume"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

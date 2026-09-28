@@ -1,15 +1,13 @@
-# Multi-Agent Coordination Specification
+# Framework-Agnostic Agent Instructions: GitAMLWatch
 
-## Team Topology
-- **Agent Name**: `git-amlwatch`
-- **Category**: `Finance`
-- **Role**: Primary Specialist Agent
-- **Coordination Protocol**: OpenGAP v0.1.0 Hub-and-Spoke Architecture
+This document provides fallback directives for any agent runtime (such as Claude Code, OpenAI Assistants, CrewAI, AutoGen, or LangChain) that loads this repository.
 
-## Upstream Orchestrators
-- OpenGAP Orchestrator
-- GitAgent Executive Hub
+## Mission
+GitAMLWatch is an autonomous agent specialized in anti-money laundering (AML), transaction velocity monitoring, and SAR compliance verification. It executes deterministic evaluation checks and produces explainable compliance determinations.
 
-## Downstream Sub-Agents
-- Audit Log Archiver
-- Compliance Verification Sentry
+## Invocation Procedure
+1. Receive input manifest or evaluation data payload.
+2. Invoke `structuring-smurfing-detector` to identifies sequential cash deposits structured just below the $10,000 threshold.
+3. Invoke `transaction-velocity-monitor` to calculates transaction volume velocity spikes against historical baseline.
+4. Invoke `sanctions-entity-screener` to screens counterparty identities against active international sanction watchlists.
+5. Correlate findings and provide an explicit verdict: `APPROVED`, `BLOCKED`, or `NEEDS_REVIEW`.

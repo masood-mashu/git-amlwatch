@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "sanctions_entity_screener",
+  "description": "Screens counterparty identities against active international sanction watchlists",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "entity_name": {
+        "type": "string",
+        "description": "Full legal name of counterparty"
+      }
+    },
+    "required": [
+      "entity_name"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
